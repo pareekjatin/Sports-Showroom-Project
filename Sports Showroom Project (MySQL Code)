@@ -1,0 +1,84 @@
+bsms
+drop database mnsportsshowroom;
+
+create database mnsportsshowroom;
+use mnsportsshowroom;
+
+create table customer(
+customerid int primary key,
+customername varchar(20) not null,
+address varchar(50),
+age int,
+sex char(1));
+insert into customer values(1,'nawaz','24/7shali gram sharma park bhavnagar',17,'m');
+insert into customer values(2,'aslam','12 ram colony bhavnagar',16,'m');
+insert into customer values(3,'maherban',' 32 chankeen street valsad ',20,'m');
+select * from customer;
+
+
+
+create table item(
+itemno int primary key,
+itemname varchar(30) not null,
+brandname varchar(30),
+gamename varchar(20),
+size int,
+colour varchar(20));
+insert into item values(1,'shoes','nike','basketball',9,'blue');
+insert into item values(2,'shorts','adidas','football',40,'black');
+insert into item values(3,'bat','spartan','cricket',7,'white');
+select * from item;
+
+
+
+
+create table billing(
+billno int primary key,
+amount double,
+discount double,
+modeofpayment varchar(30),
+totalamount double);
+
+
+insert into billing values(1,2000.00,50.00,'cheque',1950);
+insert into billing values(2,2000.00,50.00,'debit card',1950);
+insert into billing values(3,7000.00,950.00,'cash',6050);
+select * from billing;
+
+
+
+
+create table manufacturer(
+contact bigint primary key,
+brandname varchar(30),
+address varchar(50));
+insert into manufacturer values(1234567890,'nike','12 chankeen street valsad ');
+insert into manufacturer values(1265567890,'puma','23 nobody street bhavnagar ');
+insert into manufacturer values(9685747890,'nike',' ambika colony delhi ');
+select * from manufacturer;
+
+create table user(
+userid varchar(30) primary key,
+password varchar(30),
+username varchar(30),
+mobileno bigint,
+dateofbirth date,
+gender char(1));
+insert into user values('mnsports','0001','nobody',1234567890,'2000-05-30','m');
+insert into user values('mukhtarmomin@gmail.com','1234','somebody',1234123546,'2000-05-20','m');
+insert into user values('maherban123@gmail.com','98754614','everybody',1234567830,'2000-05-10','m');
+select * from user;
+show tables;
+desc customer;
+desc item;
+desc manufacturer;
+desc billing;
+desc user;
+
+
+
+
+
+
+
+
